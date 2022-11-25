@@ -28,7 +28,7 @@ class MainPage(Page):
 
     def find_iframes(self):
         self.find_elements(*IFRMS)
-        print(f'Number of iframes: {len(IFRMS)}')
+        print(f'Number of iframes: {len(IFRMS)}; type of iframes: {type(IFRMS)}')
         print(f'iFrames: {IFRMS}')
     # End of the above code
 

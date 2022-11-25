@@ -37,7 +37,7 @@ else:
 
 # Find iframes
 iframes = driver.find_elements(By.TAG_NAME, 'iframe')
-print(f'Number of iframes: {len(iframes)}')
+print(f'Number of iframes: {len(iframes)}; type of iframes: {type(iframes)}')
 print(f'iFrames: {iframes}')
 
 # Sleep to see what we have
