@@ -26,14 +26,13 @@ sleep(4)
 wait.until(EC.element_to_be_clickable(SRCH_BTN)).click()
 
 # Verify that the text "Clothing, Shoes & Accessories" is here
-searhed = ('Clothing, Shoes & Accessories')
+expected = ('Clothing, Shoes & Accessories!')
 actual = (wait.until(EC.presence_of_element_located(XPCTD_MSG)).text)
-print(f'Actual: "{actual}"\nVS expected:\n"{searhed}"')
-assert searhed in actual
-if searhed in actual:
-    print(f'Actual is OK:\n"{searhed}"\n')
+# assert expected in actual,  f'Error. Expected text: {expected}, but actual text is: {actual}'
+if expected in actual:
+    print(f'Actual is OK:\n"{actual}"\n')
 else:
-    print(f'Actual email: "{actual}"\n')
+    print(f'Error, expected: "{expected}", but got "{actual}"\n')
 
 # Find iframes
 iframes = driver.find_elements(By.TAG_NAME, 'iframe')
